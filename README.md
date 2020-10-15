@@ -42,6 +42,8 @@ echo $name_string; // Will produce: "Matthew, Mark, Luke, and John"
 You can probably get the gist of Loopy's capabilities by browsing the souce code (it's only 50 lines), but here's a quick reference of available properties and methods.
 
 ## Properties
+`i`: Integer representing the index number of the current loop (zero-based by default).
+
 `first`: Boolean for whether you are in the first iteration of the loop.
 
 `not_first`: Boolean, opposite of `first`.
@@ -53,6 +55,8 @@ You can probably get the gist of Loopy's capabilities by browsing the souce code
 `middle`: Boolean for whether you are between the first and the last. (This will never be true if only looping over one or two items.)
 
 ## Methods
+`__construct($countable, $starting_index = 0)`: When you intialize Loopy, give it the array or object you are going to loop over so that it can count it and do the math. Optionally, you can specify a starting index other than zero.
+
 `only($n)`: Returns a boolean for whether the total number of loops is equal to `$n`.
 
 `more_than($n)`: Returns a boolean for whether the total number of loops is greater than `$n`.
