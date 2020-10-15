@@ -6,7 +6,9 @@ class Loopy {
   protected $first_index;
   protected $last_index;
   protected $first;
+  protected $not_first;
   protected $last;
+  protected $not_last;
   protected $middle;
   
   public function __construct($countable, $starting_index = 0){
@@ -29,6 +31,10 @@ class Loopy {
     return $this->count > (int) $n;
   }
   
+  public function less_than($n){
+    return $this->count < (int) $n;
+  }
+  
   public function next(){
     $this->i++;
     $this->update_position();
@@ -36,7 +42,9 @@ class Loopy {
   
   protected function update_position(){
     $this->first = $this->i === $this->first_index;
+    $this->not_first = !$this->first;
     $this->last = $this->i === $this->last_index;
+    $this->not_last = !$this->last;
     $this->middle = $this->i > $this->first_index && $this->i < $this->last_index;
   }
 }
