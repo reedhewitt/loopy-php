@@ -44,6 +44,8 @@ You can probably get the gist of Loopy's capabilities by browsing the souce code
 ## Properties
 `i`: Integer representing the index number of the current loop (zero-based by default).
 
+`count`: The total number of items being looped over.
+
 `first`: Boolean for whether you are in the first iteration of the loop.
 
 `not_first`: Boolean, opposite of `first`.
@@ -57,10 +59,10 @@ You can probably get the gist of Loopy's capabilities by browsing the souce code
 ## Methods
 `__construct($countable, $starting_index = 0)`: When you intialize Loopy, give it the array or object you are going to loop over so that it can count it and do the math. Optionally, you can specify a starting index other than zero.
 
-`only($n)`: Returns a boolean for whether the total number of loops is equal to `$n`.
+`only($n)`: Returns a boolean for whether the total number of items is equal to `$n`.
 
-`more_than($n)`: Returns a boolean for whether the total number of loops is greater than `$n`.
+`more_than($n)`: Returns a boolean for whether the total number of items is greater than `$n`.
 
-`less_than($n)`: Returns a boolean for whether the total number of loops is less than `$n`.
+`less_than($n)`: Returns a boolean for whether the total number of items is less than `$n`.
 
 `next()`: This method must be called at the end of each loop to make Loopy update its internal properties and get ready for the next loop.
