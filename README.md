@@ -46,11 +46,11 @@ You can probably get the gist of Loopy's capabilities by browsing the souce code
 
 `not_first`: Boolean, opposite of `first`.
 
-`last`: Boolean for whether you are in the last iteration of the loop.
+`last`: Boolean for whether you are in the last iteration of the loop. (`first` and `last` will both be true if there is only one item to loop over.)
 
 `not_last`: Boolean, opposite of `last`.
 
-`middle`: Boolean for whether you are betwee the first and the last.
+`middle`: Boolean for whether you are between the first and the last. (This will never be true if looping over one or two items.)
 
 ## Methods
 `only($n)`: Returns a boolean for whether the total number of loops is equal to `$n`.
